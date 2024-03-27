@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO PÚBLICO DE CERTIFICACIONES WEB</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+        header {
+            background-image: url('https://i.ibb.co/Z1CRs9h/1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 40px 20px; /* Aumentar el relleno para mayor separación del contenido */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir una sombra sutil al encabezado */
+            display: flex; /* Utilizamos flexbox para colocar los logos uno al lado del otro */
+            justify-content: center; /* Centramos los logos horizontalmente */
+            align-items: center; /* Centramos los logos verticalmente */
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas si no caben en una sola línea */
+            animation: materializeBackground 2s ease; /* Aplicar la animación a la imagen de fondo */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+        @keyframes materializeBackground {
+            0% {
+                filter: blur(20px);
+                opacity: 0;
+            }
+            100% {
+                filter: blur(0);
+                opacity: 1;
+            }
+        }
+        .logo-container {
+            flex: 1; /* Cada contenedor de logo ocupará el mismo espacio */
+            margin: 10px; /* Agregamos margen para separar los logos */
+        }
+        header img.logo {
+            width: 75px; /* Reducir el tamaño del logo en un 50% */
+            height: 75px;
+            object-fit: cover;
+            border: 4px solid transparent;
+            transition: transform 0.4s ease; /* Cambiar la curva de la transición para que sea más suave */
+            transform: scale(1); /* Establecer una transformación inicial para asegurar que el logo sea visible */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir una sombra sutil al logo */
+        }
+        header img.logo:hover {
+            transform: scale(1.1); /* Aumentar ligeramente el tamaño al pasar el ratón sobre el logo */
+            border-color: #fff;
+        }
+        h1 {
+            margin-top: 20px; /* Aumentar el margen superior para separar el encabezado del contenido */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Añadir una sombra al texto del encabezado */
+            margin-bottom: 10px; /* Agregar un espacio entre el título y los logos */
+            flex: 100%; /* Ocupar todo el ancho disponible */
+            opacity: 0; /* Inicialmente ocultar el título */
+            animation: fadeIn 2s ease forwards; /* Animación de fade-in para el título */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .certificacion {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+        }
+        .certificacion img {
+            max-width: 100%;
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .certificacion {
+            background-color: #f5f5f5;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 2px solid #999; /* Recuadro más oscuro */
+        }
+        .certificacion h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .certificacion-imagen {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 2px solid #ccc; /* Borde alrededor de la imagen */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra alrededor de la imagen */
+            filter: brightness(1.1) contrast(1.1) saturate(1.1); /* Ajustes de contraste */
+        }
+        .certificacion-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+            z-index: 9999; /* Asegura que esté por encima de otros elementos */
+            overflow: auto; /* Permite desplazar el contenido si es demasiado grande */
+            padding: 20px;
+        }
+        .certificacion-modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 600px;
+        }
+        .certificacion-modal-content p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .certificacion-modal-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            max-height: 150px; /* Altura máxima de la imagen en el modal */
+        }
+        .address-bar {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+        .certificacion-btn {
+            display: block;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .certificacion-btn:hover {
+            background-color: #555;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Público de Certificaciones Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Cambio de fuente a Arial para mayor formalidad */
+        }
+
+        header h1 {
+            font-size: 32px; /* Tamaño de fuente aumentado para mayor formalidad */
+            color: #fff; /* Color de texto blanco para mejor contraste */
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo negro transparente al 70% */
+            padding: 10px; /* Añadir un poco de espacio alrededor del texto */
+            border-radius: 5px; /* Agregar bordes redondeados para mejor apariencia */
+            opacity: 0; /* Establecer opacidad inicial a 0 para la animación */
+            animation: fade-in 1s ease-in-out forwards, scale-up 1s ease-in-out forwards; /* Animación de aparición suave */
+            display: inline; /* Convertir en línea para ajustar al ancho del texto */
+            line-height: 1.4; /* Ajustar la altura de línea para centrar verticalmente el texto */
+        }
+
+        .logo-container {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scale-up {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Registro Público de Certificaciones Web</h1>
+        <h1>ASOCIACIÓN DE FORMACIÓN HOLÍSTICA ANDINA </h1>
+        <div class="logo-container">
+            <img class="logo" src="https://i.ibb.co/ZGnGkSH/LOGO-0.jpg" alt="Logo">
+        </div>
+        <div class="logo-container">
+            <img class="logo" src="https://i.ibb.co/fDZHLhs/LOGO-3.jpg" alt="Segundo Logo">
+        </div>
+    
+    </header>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="certificacion">
+        <img class="certificacion-imagen" src="https://i.ibb.co/VSLKSqn/Dise-o-sin-t-tulo-7.jpg" alt="Imagen pequeña 2">
+        <h2>Formación en Astrología</h2>
+        <h2>fecha: 10/6/2022</h2>
+        <h2>Asociación de Formación Holística Andina y "UISA" deja certificado que todos los alumnos presentes aquí cumplieron con las obligaciones Académicas contraídas formándose en Astrología Básica en el curso de “Hacía el Mundo de la Astrología”</h2>
+        <button class="certificacion-btn" onclick="openModal('modal10', 'URL_IMAGEN_GRANDE_2')">Mostrar más</button>
+        <div id="modal10" class="certificacion-modal">
+            <div class="certificacion-modal-content">
+                <span class="close" onclick="closeModal('modal10')">&times;</span>
+                <div class="address-bar">“Hacía el Mundo de la Astrología”</div>
+              
+                
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Eduardo cañete - Buenos Aires, Argentina</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Lidia Noemí Taborda - Córdoba, Argentina</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Marcela Fernández - Tierra del Fuego, Argentina</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Isabel Consuelo Rivera Ochoa - Hermosillo, sonora, México</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Cynthia Florencia Diaz - Argentina Buenos Aires Lanús</p>
+               
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="certificacion">
+        <img class="certificacion-imagen" src="https://i.ibb.co/60TK3cY/Blue-Modern-Job-Fair-Facebook-Post-2.jpg" alt="Imagen pequeña 2">
+        <h2>Sanación Kármica y Centros de Energías</h2>
+        <h2>Fecha:21/1/2024</h2>
+        <h2>El instituto "Andina Formaciones" y "UISA" Acreditan que los alumnos integrantes, han alcanzado un nivel de conocimiento Prominente. se les otorga la certificación como la facultad de ejercer bajo nustros Avales.</h2>
+        <h2>terapeutas en Sanación Kármica y Centros de Energías</h2>
+        <button class="certificacion-btn" onclick="openModal('modal9', 'URL_IMAGEN_GRANDE_2')">Mostrar más</button>
+        <div id="modal9" class="certificacion-modal">
+            <div class="certificacion-modal-content">
+                <span class="close" onclick="closeModal('modal9')">&times;</span>
+                <div class="address-bar">Terapeutas en Sanación Kármica y Centros de Energías</div>
+             
+                <p>Astrología Avanzada</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Liliana Cristina Delgado - Salta, Argentina</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Ivana Judith Gareca</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Juan Fernández - Mar del Plata, Argentina</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Godoy Betiana - Tres Arroyos</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Brenda Oriana Vecchio - Las Heras, Santa Cruz</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Juan Pablo Ortiz Pereyra - santo tomé, Corrientes</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Yanina de los Mercedes Iriarte - Bell Ville, Córdoba</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>María Rosa Muñoz - Cañuelas, Buenos aires</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Miriam Ester Arraya - San Salvador de Jujuy, Argentina</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Myriam Elsa Quispe - Cuidad Autonoma de Buenos Aires</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Jhon Dennis Argandoña - Cochabamba Bolivia</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Silvia Giordano - Buenos Aires</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Almendra Lucía Ayelén - Neuquén</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Erika Jofré - Buenos Aires</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="certificacion">
+        <img class="certificacion-imagen" src="https://i.ibb.co/ftx0Fw2/6.jpg" alt="Imagen pequeña 1">
+        <h2>"Maestros en Registros Akáshicos"</h2>
+        <h2>Fecha:27/6/2023</h2>
+        <h2>El instituto "Andina Formaciones" y "UISA" Acreditan que los alumnos integrantes, han alcanzado un nivel de conocimiento Prominente. se les otorga la certificación como la facultad de ejercer bajo nustros Avales.</h2>
+        <h2></h2>
+        <button class="certificacion-btn" onclick="openModal('modal1', '///C:/Users/Franco/Desktop/NUEVA%20P%C3%81G/face/a.jpg')">Mostrar más</button>
+        <div id="modal1" class="certificacion-modal">
+            <div class="certificacion-modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <div class="address-bar">Maestros en Registros Akáshicos</div>
+               
+               
+               
+                <img class="certificacion-imagen" src="https://i.ibb.co/Jzg34VF/b.jpg" alt="Imagen pequeña 1">
+                <p>Aldana Formes - Lima, Perú</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Gerardo Morales - Ecuador</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Eduardo Ortigoza - Argentina, Córdoba</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/dKYhQwm/c.jpg" alt="Imagen pequeña 1">
+                <p>Florencia Peñaloza - Argentina, Buenos Aires</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/TTSD5Nv/d.jpg"Imagen pequeña 1">
+                <p>Noelia Tafuni - Argentina, San Juan</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/8mx3r7W/e.jpg" alt="Imagen pequeña 1">
+                <p>Flavio Hector Sevilla - Paraguay, Asunción</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Elizabeth algañaraz - Argentina, Buenos Aires</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                <p>Luna Rita Cañizco - Argentina, Buenos Aires</p>
+                <img class="certificacion-imagen" src="https://i.ibb.co/jJCbGX9/f.jpg" alt="Imagen pequeña 1">
+                <p>Elsa Blanca Herrera - España, Sevilla</p>
+               
+               
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="certificacion">
+                    <img class="certificacion-imagen" src="https://i.ibb.co/VLJC1YN/3.jpg" alt="Imagen pequeña 2">
+                    <h2>"Especialistas en Astrología Avanzada"</h2>
+                    <h2>Fecha:2/3/2023</h2> 
+                    <h2>El instituto "Andina Formaciones" y "UISA" Acreditan que los alumnos integrantes, han alcanzado un nivel de conocimiento Prominente en el mencionado campo de la Astrología. se les otorga la certificación como la facultad Correspondiente de ejercer bajo nustros Avales.</h2>
+                    <button class="certificacion-btn" onclick="openModal('modal2', 'URL_IMAGEN_GRANDE_2')">Mostrar más</button>
+                    <div id="modal2" class="certificacion-modal">
+                        <div class="certificacion-modal-content">
+                            <span class="close" onclick="closeModal('modal2')">&times;</span>
+                            <div class="address-bar">Especialistas en Astrología Avanzada</div>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/4sLDbVq/g.jpg" alt="Imagen pequeña 1">
+                            <p>María gonzáles del peurreydon - México, Hermosillo</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/mDtSt17/h.jpg" alt="Imagen pequeña 1">
+                            <p>Aixa Mariela Guitierrez - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/BzgNCWm/i.jpg" alt="Imagen pequeña 1">
+                            <p>Pedro Ariel Moreno - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/SyrcV9Z/j.jpg" alt="Imagen pequeña 1">
+                            <p>Marco Elias Walter Hérnandez - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/8BYRbRF/k.jpg" alt="Imagen pequeña 1">
+                            <p>Mauro Guitierréz - Argentina, Formosa</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Mónica Beatriz Sunteriz- Argentina, Buenos Aires</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="certificacion">
+                    <img class="certificacion-imagen" src="https://i.ibb.co/TvJtWgR/4.jpg" alt="Imagen pequeña 2">
+                    <h2>"Guía Espiritual en Metafísica y Filosofía"</h2>
+                    <h2>Fecha:26/3/2023</h2>
+                    <h2>El instito "Andina Formaciones" y "UISA" Acreditan que los alumnos integrantes, han alcanzado un nivel de conocimiento Prominente en el mencionado campo de la Filosofía y La metafísica. se les otorga la certificación como la facultad Correspondiente de ejercer bajo nustros Avales.
+                        </h2>
+                    <button class="certificacion-btn" onclick="openModal('modal3', 'URL_IMAGEN_GRANDE_2')">Mostrar más</button>
+                    <div id="modal3" class="certificacion-modal">
+                        <div class="certificacion-modal-content">
+                            <span class="close" onclick="closeModal('modal3')">&times;</span>
+                            <div class="address-bar">Introducción a la Metafísica y la Filosofía</div>
+                           
+                            <img class="certificacion-imagen" src="https://i.ibb.co/ZRQ8x3Y/l.jpg" alt="Imagen pequeña 1">
+                            <p>Ricardo Leandro Morales - México, Cuidad de México</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Zulema Vaneza Sanchez - Colombia, Cartagena</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Eliseo Batista - México, xalapa-</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Ariel Esteban Chazarreta - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Ayelen Candela Chazarreta - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/pR2ftq3/ll.jpg" alt="Imagen pequeña 1">
+                            <p>Luis Váldez - Bolivia, cochabamba</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Jhonatan Alfredo Porizza - Argentina, Mendoza-</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="certificacion">
+                    <img class="certificacion-imagen" src="https://i.ibb.co/RcT733K/Psicolog-a-Hol-stica-4.jpg" alt="Imagen pequeña 2">
+                    <h2>"Especialistas en Psicología Holística"</h2>
+                    <h2>Fecha:18/9/2022</h2>
+                    <h2>El instito "Andina Formaciones" y "UISA" Acreditan que los alumnos integrantes, han alcanzado un nivel de conocimiento Prominente en el mencionado campo de la Psicología Holística. se les otorga la certificación como la facultad Correspondiente de ejercer bajo nustros Avales "Especialista en Psicología Holística".
+                        </h2>
+                    <button class="certificacion-btn" onclick="openModal('modal4', 'URL_IMAGEN_GRANDE_2')">Mostrar más</button>
+                    <div id="modal4" class="certificacion-modal">
+                        <div class="certificacion-modal-content">
+                            <span class="close" onclick="closeModal('modal4')">&times;</span>
+                            <div class="address-bar">Psicología Holística</div>
+                           
+                           
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Laura Abigaíl Cejas - Argentina, Jujuy</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/WFQgMLq/m.jpg" alt="Imagen pequeña 1">
+                            <p>Gerardo Julio Agostinatti - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/1bdrnML/mm.jpg" alt="Imagen pequeña 1">
+                            <p>Carlos Adrian Arenar - Paraguay, Asunción</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Laura Blanca peña - México, San Felipe del Agua</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Consuelo Petra - Argentina, Rosario</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Adicth Rodriguéz Nieto - Perú, Lima</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/TWcTQFJ/n.jpg" alt="Imagen pequeña 1">
+                            <p>Pablo Delgado Ñuñez - Paraguay, Areguá</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/pR2ftq3/ll.jpg" alt="Imagen pequeña 1">
+                            <p>Luis Váldez - Bolivia, cochabamba</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/bP6s7NQ/o.jpg" alt="Imagen pequeña 1">
+                            <p>Ilian Jhoana Flores Peralta - Argentina, Misiones</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/bRLVQ5h/p.jpg" alt="Imagen pequeña 1">
+                            <p>Eugenia Cesilia Carrozino - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Carolina Natalia Chazarreta - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/443zrdQ/q.jpg" alt="Imagen pequeña 1">
+                            <p>Benjamín Sebastían Pierre - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/r0VTpL9/x.jpg" alt="Imagen pequeña 1">
+                            <p>Isabel María Lujan de las Nieves - México, Cuidad de México</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Elías Lautaro Marcia - Argentina, Entre Ríos</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Priscila Laura Jara - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Rocío Molína - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/FXDDSgn/y.jpg" alt="Imagen pequeña 1">
+                            <p>Alejandra Estefania Pucheto - Argentina, Córdoba</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Gloría Blanca - Argentina, La Pampa</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/cvFssqn/a.jpg" alt="Imagen pequeña 1">
+                            <p>Camila Gómez - Medellín, Colombia</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Zulema Martiganini - Ecuador, Quito</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Xisto Elviro Printo - Chile, Temuco</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="certificacion">
+                    <img class="certificacion-imagen" src="https://i.ibb.co/xfsnmw7/Dise-o-sin-t-tulo-5.jpg" alt="Imagen pequeña 2">
+                    <h2>Formación en Astrología</h2>
+                    <h2>fecha: 10/6/2022</h2>
+                    <h2>Asociación de Formación Holística Andina deja certificado que todos los alumnos presentes aquí cumplieron con las obligaciones Académicas contraídas formándose en Astrología Básica en el curso de “Hacía el Mundo de la Astrología”</h2>
+                    <button class="certificacion-btn" onclick="openModal('modal5', 'URL_IMAGEN_GRANDE_2')">Mostrar más</button>
+                    <div id="modal5" class="certificacion-modal">
+                        <div class="certificacion-modal-content">
+                            <span class="close" onclick="closeModal('modal5')">&times;</span>
+                            <div class="address-bar">Formación en Astrología</div>
+                           
+                            <p>Formación en Astrología</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Pedro Samchez Juck - Argentina</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/sHvGQqk/xx.jpg" alt="Imagen pequeña 1">
+                            <p>Guido Francisco gónzales - México, Tijuana</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/HXhWQhs/xxx.jpg" alt="Imagen pequeña 1">
+                            <p>Erika Pamela Marín - Argentina, San juan</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/gTXFgQB/xxxx.jpg" alt="Imagen pequeña 1">
+                            <p>Claudia Agustina Herrema - Ecuador, Quito</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Marcelo Horacio Puchilo - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/rb5Hn9f/xxxxxxx.jpg" alt="Imagen pequeña 1">
+                            <p>Hernan Dilan Bazano - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Emilio Joel Galarza - Argentina, Santa cruz</p>
+                        </div>
+                    </div>
+                </div>
+                
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+                <div class="certificacion">
+                    <img class="certificacion-imagen" src="https://i.ibb.co/L9h5mxK/A-adir-un-poco-de-texto-10.jpg" alt="Imagen pequeña 2">
+                    <h2>Espiritualidad y Teología Avanzada</h2>
+                    <h2>fecha: 5/2/2022</h2>
+                    <h2>Asociación de Formación Holística Andina deja certificado que todos los alumnos presentes aquí cumplieron con las obligaciones Académicas contraídas formándose en Espiritualidad y Teología, alcanzando un conocimiento prominente en dicho campos de estudio.</h2>>
+                    <button class="certificacion-btn" onclick="openModal('modal6', 'URL_IMAGEN_GRANDE_2')">Mostrar más</button>
+                    <div id="modal6" class="certificacion-modal">
+                        <div class="certificacion-modal-content">
+                            <span class="close" onclick="closeModal('modal6')">&times;</span>
+                            <div class="address-bar">Espiritualidad y Teología Avanzada</div>
+                            
+                            <p></p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Felipe Olmedo Palacions - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Gerardo Gonzalo Tiffiote - Argentina, Menzoda</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/Y7G5CY8/xxxxxxxxx.jpg" alt="Imagen pequeña 1">
+                            <p>Luciano Marín Ponchebique - Colombia, Cali</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Camila Luna Jaimes - Colombia, Medillín</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/r4PjM4v/xxxxxxxxxx.jpg" alt="Imagen pequeña 1">
+                            <p>Ángela Guitierrez - Colombia, Bogotá</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Rodolfo Juan delbosque - Argentina, Tucumán</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Hernesto emilio Ramos - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Gladis Olga Carrizo - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Mónica Norma Kleterjobh - Argentina, Corrientes</p>
+                        </div>
+                    </div>
+                </div>
+                
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="certificacion">
+                    <img class="certificacion-imagen" src="https://i.ibb.co/tJX42p1/5.jpg" alt="Imagen pequeña 2">
+                    <h2>"Especialistas en Psicología Holística"</h2>
+                    <h2>Fecha:25/5/2021</h2>
+                    <h2>El instito "Andina Formaciones" y "UISA" Acreditan que los alumnos integrantes, han alcanzado un nivel de conocimiento Prominente en el mencionado campo de la Psicología Holística. se les otorga la certificación como la facultad Correspondiente de ejercer bajo nustros Avales "Especialista en Psicología Holística".
+                        </h2>
+                    <button class="certificacion-btn" onclick="openModal('modal7', 'URL_IMAGEN_GRANDE_2')">Mostrar más</button>
+                    <div id="modal7" class="certificacion-modal">
+                        <div class="certificacion-modal-content">
+                            <span class="close" onclick="closeModal('modal7')">&times;</span>
+                            <div class="address-bar">"Especialistas en Psicología Holística"</div>
+                           
+                          
+                            <img class="certificacion-imagen" src="https://i.ibb.co/P6B0Pvt/yy.jpg" alt="Imagen pequeña 1">
+                            <p>Pablo Quintero Olmos - Perú, Lima/p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Fernando Diego Rojas - Argentina, Chaco</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Salonmón Ricardo Carrizo - Argentina, San Luis</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/yVvDwk4/yyy.jpg" alt="Imagen pequeña 1">
+                            <p>Teresa Leticia Konahj - Ecuador, Puyo</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/DffLV5V/yyyy.jpg" alt="Imagen pequeña 1">
+                            <p>Nieves Luna Demontenegro - Argentina, Río Grande</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/zfpSbCd/yyyyyy.jpg" alt="Imagen pequeña 1">
+                            <p>Leonardo Machado - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Abril Cintya Prieto - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>María Isabel Navarro, España, Madrid </p>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="certificacion">
+                    <img class="certificacion-imagen" src="https://i.ibb.co/pb8G4Ft/A-adir-un-poco-de-texto-12.jpg" alt="Imagen pequeña 2">
+                    <h2>"Hipnosis Método Holistic"</h2>
+                    <h2>Fecha:16/4/2021</h2>
+                    <h2>El instito "Andina Formaciones" y "UISA" Acreditan que los alumnos integrantes, han alcanzado un nivel de conocimiento Prominente en el mencionado campo de la Hipnología. se les otorga la certificación como la facultad Correspondiente de ejercer bajo nustros Avales "Terapeuta en Hipnoterapia"".
+                        </h2>
+                    <button class="certificacion-btn" onclick="openModal('modal8', 'URL_IMAGEN_GRANDE_2')">Mostrar más</button>
+                    <div id="modal8" class="certificacion-modal">
+                        <div class="certificacion-modal-content">
+                            <span class="close" onclick="closeModal('modal8')">&times;</span>
+                            <div class="address-bar">Hipnosis Método Holistic"</div>
+                            
+                           
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Facundo Esteban Gómez Mendoza - Paraguay, Asunción</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Isabella Sofía López Castro - Chile, Santiago</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>uan Pablo Hernández Silva - Bolivia, La Paz</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Emiliano Martín Pérez González - Uruguay, Montevideo</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Santiago Alejandro Fernández - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>María Alejandra Sánchez García - México, Cuidad de México</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Juan Carlos Rodríguez Pérez, Argentina, Entre Ríos</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/TKcYFTT/zz.jpg" alt="Imagen pequeña 1">
+                            <p>Gabriela Morales Fernández - Paraguay, Asunsión</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/XStZRdj/xxxxx.png" alt="Imagen pequeña 1">
+                            <p>Luis Miguel Hernández Martínez - Uruguay, Montevideo</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/Wt5LbYm/zzz.jpg" alt="Imagen pequeña 1">
+                            <p>Ana Sofía López Torres - Argentina, Buenos Aires</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/k3sf3tf/zzzzzzzzz.jpg" alt="Imagen pequeña 1">
+                            <p>Valentina Ramírez Gutiérrez - Argentina, Cuidad De BS AS</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/rMLxmDd/zzzzzzzzzzzzzz.jpg" alt="Imagen pequeña 1">
+                            <p>Laura Gabriela Díaz - Argentina, Córdoba</p>
+                            <img class="certificacion-imagen" src="https://i.ibb.co/2ZP9k3G/zzzzzzzzzzzzzzzzzz.jpg" alt="Imagen pequeña 1">
+                            <p>Camila Victoria Silva López, -Argentina, Neuquen</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+            </div>
+        </div>
+    </div>
+    <!-- Agregar más certificaciones según sea necesario -->
+
+    <script>
+        // Función para abrir el modal
+        function openModal(modalId, imagenUrl) {
+            var modal = document.getElementById(modalId);
+            var imagenGrande = document.getElementById('imagenGrande' + modalId.slice(-1));
+            modal.style.display = "block";
+            imagenGrande.src = imagenUrl;
+        }
+
+        // Función para cerrar el modal
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
